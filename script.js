@@ -1,7 +1,8 @@
-var kuralContainer=document.getElementById('kuralContainer')
+var kuralContainer=document.querySelector('.kuralContainer')
 
+//To get data from api
  function getKuraldata(){
-    var kuralNumber = document.getElementById('kuralno').value
+    var kuralNumber = document.querySelector('.kuralno').value
     if(kuralNumber<0 || kuralNumber>1330){
         alert("Please enter numbers from 1 to 1330")
     }
@@ -12,6 +13,7 @@ var kuralContainer=document.getElementById('kuralContainer')
         .then((res)=>{return res.json()})
         .then((data)=>{console.log(data)        
 
+            //Displaying the content dynamically using Javascript
         kuralContainer.innerHTML=
         `<div class="card" style="background-color:#D19F71; color:white;">
         <div class="card-header">
